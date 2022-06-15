@@ -21,3 +21,7 @@ INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('2.0
 INSERT INTO tb_resource (title, description, position, img_uri, resource_type, offer_id) VALUES ('Trilha HTML', 'Trilha principal do curso', 1, 'https://blog.quick.com.br/wp-content/uploads/2022/04/image-from-rawpixel-id-6341207-jpeg-scaled.jpg', 1, 1);
 INSERT INTO tb_resource (title, description, position, img_uri, resource_type, offer_id) VALUES ('Forum', 'Tire suas duvidas', 2, 'https://blog.quick.com.br/wp-content/uploads/2022/04/image-from-rawpixel-id-6341207-jpeg-scaled.jpg', 2, 1);
 INSERT INTO tb_resource (title, description, position, img_uri, resource_type, offer_id) VALUES ('Lives', 'Lives exclusivas para a turma', 3, 'https://blog.quick.com.br/wp-content/uploads/2022/04/image-from-rawpixel-id-6341207-jpeg-scaled.jpg', 0, 1);
+
+INSERT INTO tb_section (title, description, position, img_uri, resource_id, pre_requisite_id) VALUES ('Capitulo 1', 'Neste capítulo vamos começar!', 1, 'http://www.microcampcentro.com.br/assets/images/courses/thumb_web.jpg', 1, null)
+INSERT INTO tb_section (title, description, position, img_uri, resource_id, pre_requisite_id) VALUES ('Capitulo 2', 'Neste capítulo vamos continuar!', 2, 'http://www.microcampcentro.com.br/assets/images/courses/thumb_web.jpg', 1, 1)
+INSERT INTO tb_section (title, description, position, img_uri, resource_id, pre_requisite_id) VALUES ('Capitulo 2', 'Neste capítulo vamos finalizar!', 3, 'http://www.microcampcentro.com.br/assets/images/courses/thumb_web.jpg', 1, 2)
