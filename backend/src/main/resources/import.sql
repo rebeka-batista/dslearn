@@ -24,7 +24,21 @@ INSERT INTO tb_resource (title, description, position, img_uri, resource_type, o
 
 INSERT INTO tb_section (title, description, position, img_uri, resource_id, pre_requisite_id) VALUES ('Capitulo 1', 'Neste capítulo vamos começar!', 1, 'http://www.microcampcentro.com.br/assets/images/courses/thumb_web.jpg', 1, null)
 INSERT INTO tb_section (title, description, position, img_uri, resource_id, pre_requisite_id) VALUES ('Capitulo 2', 'Neste capítulo vamos continuar!', 2, 'http://www.microcampcentro.com.br/assets/images/courses/thumb_web.jpg', 1, 1)
-INSERT INTO tb_section (title, description, position, img_uri, resource_id, pre_requisite_id) VALUES ('Capitulo 2', 'Neste capítulo vamos finalizar!', 3, 'http://www.microcampcentro.com.br/assets/images/courses/thumb_web.jpg', 1, 2)
+INSERT INTO tb_section (title, description, position, img_uri, resource_id, pre_requisite_id) VALUES ('Capitulo 3', 'Neste capítulo vamos finalizar!', 3, 'http://www.microcampcentro.com.br/assets/images/courses/thumb_web.jpg', 1, 2)
 
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_moment, refund_moment, available, only_update) VALUES (1, 1, TIMESTAMP WITH TIME ZONE '2020-11-20T13:00:00Z', null, true, false)
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_moment, refund_moment, available, only_update) VALUES (2, 1, TIMESTAMP WITH TIME ZONE '2020-11-20T13:00:00Z', null, true, false)
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 1 do capítulo 1', 1, 1)
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 2 do capítulo 1', 2, 1)
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 3 do capítulo 1', 3, 1)
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Tarefa do capítulo 1', 4, 1)
+
+INSERT INTO tb_content (id, text_content, video_uri) VALUES (1, 'Material de apoio', 'https://www.youtube.com/results?search_query=devsuperior')
+INSERT INTO tb_content (id, text_content, video_uri) VALUES (2, 'Material de apoio', 'https://www.youtube.com/results?search_query=devsuperior')
+INSERT INTO tb_content (id, text_content, video_uri) VALUES (3, 'Material de apoio', 'https://www.youtube.com/results?search_query=devsuperior')
+
+INSERT INTO tb_task (id, description, question_count, approval_count, weight, due_date) VALUES (4, 'Fazer um trabalho legal', 5, 4, 1.0, TIMESTAMP WITH TIME ZONE '2020-11-25T13:00:00Z')
+
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (1, 1, 1)
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (2, 1, 1)
